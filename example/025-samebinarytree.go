@@ -21,10 +21,10 @@ func same(t1,t2 *tree.Tree) bool {
     go walk(t1,ch)  
     go walk(t2,ch1)
     for{//循环比较
-        v1:=<-ch
-        v2:=<-ch1
-        fmt.Println(v1,v2)
-        if v1!=v2{
+        //v1:=<-ch
+        //v2:=<-ch1
+        fmt.Println(<-ch,<-ch1)
+        if <-ch!=<-ch1{
             return false
         }
     } 
